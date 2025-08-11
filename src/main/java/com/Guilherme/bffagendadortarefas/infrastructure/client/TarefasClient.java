@@ -22,7 +22,7 @@ public interface TarefasClient {
     List<TarefasDTOResponse> buscaDeListaTarefasPorPeriodo(
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataInicial,
             @RequestParam @DateTimeFormat(iso = DateTimeFormat.ISO.DATE_TIME) LocalDateTime dataFinal,
-           @RequestHeader(name = "Authorization") String token);
+            @RequestHeader(name = "Authorization") String token);
 
     @GetMapping
     List<TarefasDTOResponse> buscaTarefasPorEmail(@RequestHeader("Authorization") String token);
