@@ -16,6 +16,8 @@ public class FeignError implements ErrorDecoder {
 
 
 
+
+
     @Override
     public Exception decode(String s, Response response) {
 
