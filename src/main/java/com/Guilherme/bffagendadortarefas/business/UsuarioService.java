@@ -8,6 +8,7 @@ import com.Guilherme.bffagendadortarefas.business.dto.in.UsuarioDTORequest;
 import com.Guilherme.bffagendadortarefas.business.dto.out.EnderecoDTOResponse;
 import com.Guilherme.bffagendadortarefas.business.dto.out.TelefoneDTOResponse;
 import com.Guilherme.bffagendadortarefas.business.dto.out.UsuarioDTOResponse;
+import com.Guilherme.bffagendadortarefas.business.dto.out.ViaCepDTOResponse;
 import com.Guilherme.bffagendadortarefas.infrastructure.client.UsuarioClient;
 
 import lombok.RequiredArgsConstructor;
@@ -57,5 +58,8 @@ public class UsuarioService {
         return usuarioClient.cadastraTelefone(telefoneDTO, token);
     }
 
+    public ViaCepDTOResponse buscarEnderecoPorCep(String cep){
+        return usuarioClient.buscarDadosCep(cep);
+    }
 
 }
